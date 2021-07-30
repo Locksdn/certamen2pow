@@ -37,7 +37,7 @@ const cargarTabla = async ()=>{
         tdFecha.innerText = lectura.fecha;
         tdHora.innerText = lectura.hora;
         tdMedidor.innerText = lectura.medidor;
-        tdValor.innerText = lectura.valor;
+        tdValor.innerText = lectura.valor + "  ";
 
         if(lectura.tipo_medida == "kW"){
             icono.classList.add("fas", "fa-bolt", "text-warning");
