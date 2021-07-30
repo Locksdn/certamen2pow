@@ -1,7 +1,7 @@
 @extends('layout.master')
 @section('content')
 
-<div class="card">
+<div class="card bg-secondary">
     <div class="card-body m-4">
         <h4 class="card-title">Mediciones Existentes</h4>
         <br>
@@ -22,4 +22,9 @@
     </div>
 </div>
 
+@endsection
+
+@section('javascript')
+    <script src="{{asset('js/services/lecturasService.js')}}"></script>
+    <script src="{{asset('js/mediciones_existentes.js')}}"></script>
 @endsection

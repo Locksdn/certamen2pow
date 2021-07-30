@@ -8,7 +8,7 @@
         <form>
             <div class="form-group">
                 <label for="date">Fecha</label>
-                <input class="form-control" id="date" name="date" type="date">
+                <input class="form-control" id="date" name="date" type="date" required>
             </div>
             <br>
             <div class="form-group">
@@ -19,7 +19,7 @@
             <div class="form-group">
                 <label for="medidor">Medidor</label>
                 <select class="form-control" name="medidor" id="medidor">
-                    @for ($i = 0; $i < 11; $i++)
+                    @for ($i = 1; $i < 11; $i++)
                         <option value="{{$i}}">{{$i}}</option>
                     @endfor
                 </select>
@@ -32,7 +32,7 @@
             <br>
             <div class="form-group">
                 <label for="valor">Valor</label>
-                <input type="number" min=0 max=500 class="form-control" name="valor" id="valor">
+                <input type="number" min=1 max=500 class="form-control" name="valor" id="valor">
             </div>
             <br>
             <div class="form-group">

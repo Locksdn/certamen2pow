@@ -18,11 +18,11 @@ class LecturaController extends Controller
         $lectura = new Lectura();
         $lectura->fecha         = $input["fecha"];
         $lectura->hora          = $input["hora"];
-        $lectura->medidor       = $input["medida"];
+        $lectura->medidor       = $input["medidor"];
         $lectura->direccion     = $input["direccion"];
         $lectura->valor         = $input["valor"];
         $lectura->tipo_medida   = $input["tipo_medida"];
-        
+
         $lectura->save();
         return $lectura;
     }
@@ -33,7 +33,7 @@ class LecturaController extends Controller
 
         $lectura = Lectura::findOrFail($id);
         $lectura->delete();
-        
+
         return "Eliminado";
     }
 }

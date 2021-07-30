@@ -19,6 +19,7 @@ const eliminarLectura = async (id) =>{
                 "Content-Type": "application/json"
             }
         });
+        return true;
     }catch(except){
         return false;
     }
