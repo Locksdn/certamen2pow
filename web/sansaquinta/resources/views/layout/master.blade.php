@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{csrf_token()}}">
     <title>Sansaquinta</title>
 
     <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.css">
@@ -36,9 +37,10 @@
         @yield('content')
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{asset('js/axios_config.js')}}"></script>
 
     @yield('javascript')
 </body>

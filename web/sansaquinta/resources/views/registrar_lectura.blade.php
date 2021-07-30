@@ -5,7 +5,7 @@
     <div class="card-body m-4">
         <h4 class="card-title">Registrar Lectura</h4>
         <br>
-        <form >
+        <form>
             <div class="form-group">
                 <label for="date">Fecha</label>
                 <input class="form-control" id="date" name="date" type="date">
@@ -19,6 +19,9 @@
             <div class="form-group">
                 <label for="medidor">Medidor</label>
                 <select class="form-control" name="medidor" id="medidor">
+                    @for ($i = 0; $i < 11; $i++)
+                        <option value="{{$i}}">{{$i}}</option>
+                    @endfor
                 </select>
             </div>
             <br>
@@ -29,7 +32,7 @@
             <br>
             <div class="form-group">
                 <label for="valor">Valor</label>
-                <input type="number" class="form-control" name="valor" id="valor">
+                <input type="number" min=0 max=500 class="form-control" name="valor" id="valor">
             </div>
             <br>
             <div class="form-group">
@@ -50,6 +53,6 @@
 @endsection
 
 @section('javascript')
-<script src="{{asset('js/registrar_lectura.js')}}"></script>
 <script src="{{asset('js/services/lecturasService.js')}}"></script>
+<script src="{{asset('js/registrar_lectura.js')}}"></script>
 @endsection

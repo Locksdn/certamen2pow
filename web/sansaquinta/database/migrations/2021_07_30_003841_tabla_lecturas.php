@@ -21,7 +21,7 @@ class TablaLecturas extends Migration
             $table->integer("medidor")->unsigned();
             $table->string("direccion", 200);
             $table->integer("valor")->unsigned();
-            $table->string("tipo_medida", 5);
+            $table->string("tipo_medida", 15);
 
             $table->timestamps();
         });
